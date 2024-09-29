@@ -18,7 +18,6 @@ function showHistory() {
         btn.setAttribute("data-lat", result.lat);
         btn.setAttribute("data-lon", result.lon);
         btn.onclick = (event) => {
-            console.log(event.target.dataset.lat)
             currentWeather(event.target.dataset.lat, event.target.dataset.lon);
             getForecast(event.target.dataset.lat, event.target.dataset.lon);
         }
