@@ -97,6 +97,7 @@ function displayCurrent(data) {
     <h5>Wind: ${weather.wind} mph</h5>
     <h5>Humidity: ${weather.humidity}%</h5>
     `;
+    setBackground(data.weather[0].icon);
 }
 
 function getForecast(lat, lon) {
@@ -147,8 +148,8 @@ function displayForecast(forecasts) {
 }
 
 function saveHistory(name, lat, lon) {
-    for (city of searchHistory){
-        if (name == city.name || (lat == city.lat && lon == city.lon)){
+    for (city of searchHistory) {
+        if (name == city.name || (lat == city.lat && lon == city.lon)) {
             return;
         }
     }
@@ -158,4 +159,62 @@ function saveHistory(name, lat, lon) {
     }
     localStorage.setItem("history", JSON.stringify(searchHistory));
     showHistory();
+}
+
+function setBackground(icon) {
+    let main = document.getElementsByTagName("main")[0];
+
+    switch (icon) {
+        case "01d":
+        case "02d":
+            main.style.backgroundImage = "url('./assets/backgrounds/clear-sky.gif')";
+            break;
+        case "03d":
+            main.style.backgroundImage = "url('./assets/backgrounds/scattered-clouds.gif')";
+            break;
+        case "04d":
+            main.style.backgroundImage = "url('./assets/backgrounds/broken-clouds.gif')";
+            break;
+        case "01n":
+        case "02n":
+            main.style.backgroundImage = "url('./assets/backgrounds/clear-night.gif')";
+            break;
+        case "03d":
+            main.style.backgroundImage = "url('./assets/backgrounds/scattered-clouds-night.gif')";
+            break;
+        case "04n":
+            main.style.backgroundImage = "url('./assets/backgrounds/broken-clouds-night.gif')";
+            break;
+        case "50d":
+            main.style.backgroundImage = "url('./assets/backgrounds/mist.gif')";
+            break;
+        case "50n":
+            main.style.backgroundImage = "url('./assets/backgrounds/mist-night.gif')";
+            break;
+        case "09d":
+        case "09n":
+            main.style.backgroundImage = "url('./assets/backgrounds/shower.gif')";
+            break;
+        case "10d":
+        case "10n":
+            main.style.backgroundImage = "url('./assets/backgrounds/rain.gif')";
+            break;
+        case "11d":
+        case "11n":
+            main.style.backgroundImage = "url('./assets/backgrounds/thunderstorm.gif')";
+            break;
+        case "13d":
+            main.style.backgroundImage = "url('./assets/backgrounds/snow-day.gif')";
+            break;
+        case "13n":
+            main.style.backgroundImage = "url('./assets/backgrounds/snow-night.gif')";
+            break;
+        default:
+            console.error(icon);
+            break;
+    }
+    main.style.backgroundSize = "cover";  // Make the image cover the entire element
+    main.style.backgroundPosition = "center";  // Center the image
+    main.style.backgroundRepeat = "no-repeat";  // Prevent the image from repeating
+
 }
