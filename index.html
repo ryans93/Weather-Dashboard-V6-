@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <h1>Weather Tracker</h1>
+    </header>
+
+    <main>
+        <aside>
+            <h3>Enter City, State or Zipcode</h3>
+            <form id="search-form">
+                <input type="text" id="location" name="location" placeholder="Orlando, FL">
+                <h3>Select country</h3>
+                <select name="country" id="country" required></select>
+                <h3>Search by: </h3>
+                <input type="radio" id="city" name="search-type" value="city" checked="true">
+                <label for="city">City</label><br>
+                <input type="radio" id="zip" name="search-type" value="zip">
+                <label for="zip">Zipcode</label><br>
+                <button id="searchButton" type="submit">Submit</button>
+              </form>
+
+            <h3>Recent Searches</h3>
+            <div id="search-history"></div>
+        </aside>
+        <section id ="current-day">
+
+        </section>
+        <section id="5-day">
+
+        </section>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/countries.js"></script>
+</body>
+
+</html>
