@@ -99,6 +99,7 @@ function displayCurrent(data) {
     <h5>Wind: ${weather.wind} mph</h5>
     <h5>Humidity: ${weather.humidity}%</h5>
     `;
+    document.getElementById("current-day").style = "opacity: 1;"
     setBackground(data.weather[0].icon);
 }
 
@@ -150,6 +151,7 @@ function displayForecast(forecasts) {
         cardSection.appendChild(card);
     }
     forecastSection.appendChild(cardSection);
+    forecastSection.style = "opacity: 1;"
 }
 
 function saveHistory(name, lat, lon) {
@@ -221,5 +223,4 @@ function setBackground(icon) {
     main.style.backgroundSize = "cover";  // Make the image cover the entire element
     main.style.backgroundPosition = "center";  // Center the image
     main.style.backgroundRepeat = "no-repeat";  // Prevent the image from repeating
-
 }

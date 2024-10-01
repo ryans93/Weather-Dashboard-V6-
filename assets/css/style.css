@@ -6,6 +6,9 @@ section {
 
 body {
     font-family: Impact, Comic Sans, sans-serif;
+    background-image: url("../backgrounds/default.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -34,6 +37,7 @@ aside {
     padding-bottom: 10px;
     margin-top: 15px;
     margin-left: 15px;
+    border-radius: 10px;
 }
 
 #weather-data {
@@ -47,11 +51,12 @@ aside {
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255, 0.75);
-    border: 5px solid indigo;
     border-radius: 10px;
     margin: 15px 0px 15px;
     width: 50%;
-    padding: 10px, 0px, 10px;
+    padding: 10px 0px 10px;
+    opacity: 0;
+    border: 5px solid indigo;
 }
 
 #search-history {
@@ -81,7 +86,7 @@ form {
     background-color: rgb(2, 6, 65, 0.8);
     color: white;
     padding: 10px;
-    border: 6px solid rgb(75, 0, 130);
+    border: 6px solid red;
     border-radius: 5px;
 }
 
@@ -91,6 +96,8 @@ form {
     width: 75%;
     background-color: rgb(255, 255, 255, 0.75);
     padding-top: 10px;
+    opacity: 0;
+    border: 5px solid indigo;
 }
 
 .card-section {
