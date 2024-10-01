@@ -1,0 +1,102 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: Impact, Comic Sans, sans-serif;
+}
+
+header {
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(112, 128, 144, 0.75);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    flex-wrap: wrap;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    background-color: rgb(255, 255, 255, 0.3);
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#weather-data {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+}
+
+#current-day {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255, 0.75);
+    border: 5px solid indigo;
+    border-radius: 10px;
+    margin: 15px 0px 15px;
+    width:50%;
+    padding: 10px, 0px, 10px;
+}
+
+#search-history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    width: 50%;
+    margin: 5px 0px 5px;
+    color:white;
+    background-color: green;
+}
+
+form {
+    margin-left: 10px;
+}
+
+#title {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    background-color: rgb(2, 6, 65, 0.8);
+    color: white;
+    padding: 10px;
+    border: 6px solid rgb(75, 0, 130);
+    border-radius: 5px;
+}
+
+#five-day {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    background-color: rgb(255, 255, 255, 0.75);
+    padding-top:10px;
+}
+
+.card-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 10px 0px 20px;
+}
+
+select {
+    width: 90%;
+}

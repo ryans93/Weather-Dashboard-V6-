@@ -91,8 +91,10 @@ function displayCurrent(data) {
     console.log(weather);
 
     document.getElementById("current-day").innerHTML = `
-    <h2>${weather.name} (${weather.date})</h2>
-    <img src=${weather.icon} alt=${weather.iconAlt}/>
+    <div id="title">
+        <h2>${weather.name} (${weather.date})</h2>
+        <img src=${weather.icon} alt=${weather.iconAlt}/>
+    </div>
     <h5>Temp: ${weather.temp}°F</h5>
     <h5>Wind: ${weather.wind} mph</h5>
     <h5>Humidity: ${weather.humidity}%</h5>
@@ -128,11 +130,13 @@ function getForecast(lat, lon) {
 }
 
 function displayForecast(forecasts) {
-    let forecastSection = document.getElementById("5-day");
+    let forecastSection = document.getElementById("five-day");
     forecastSection.innerHTML = "";
     let h3 = document.createElement("h3");
     h3.textContent = "5-day Forecast";
     forecastSection.appendChild(h3);
+    let cardSection = document.createElement("div");
+    cardSection.classList = "card-section";
     for (weather of forecasts) {
         let card = document.createElement("div");
         card.classList = "card";
@@ -143,8 +147,9 @@ function displayForecast(forecasts) {
         <h5>Wind: ${weather.wind} mph</h5>
         <h5>Humidity: ${weather.humidity}%</h5>
         `;
-        forecastSection.appendChild(card);
+        cardSection.appendChild(card);
     }
+    forecastSection.appendChild(cardSection);
 }
 
 function saveHistory(name, lat, lon) {
@@ -162,7 +167,7 @@ function saveHistory(name, lat, lon) {
 }
 
 function setBackground(icon) {
-    let main = document.getElementsByTagName("main")[0];
+    let main = document.getElementsByTagName("body")[0];
 
     switch (icon) {
         case "01d":
@@ -179,7 +184,7 @@ function setBackground(icon) {
         case "02n":
             main.style.backgroundImage = "url('./assets/backgrounds/clear-night.gif')";
             break;
-        case "03d":
+        case "03n":
             main.style.backgroundImage = "url('./assets/backgrounds/scattered-clouds-night.gif')";
             break;
         case "04n":
