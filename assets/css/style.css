@@ -6,7 +6,7 @@ section {
 
 body {
     font-family: Impact, Comic Sans, sans-serif;
-    background-image: url("../backgrounds/default.jpg");
+    background-image: url("../backgrounds/default2.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -111,4 +111,49 @@ form {
 
 select {
     width: 90%;
+}
+
+#location {
+    width: 90%;
+}
+
+@media screen and (max-width: 1250px) {
+    .card-section{
+        flex-direction: column;
+    }
+
+    button {
+        width: 80%;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        margin-bottom: 20px;
+    }
+
+    .card-section {
+        align-items: center;
+        height: 60vh;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+
+    #five-day {
+        width: 60%;
+    }
+
+    aside {
+        width: 25%;
+    }
+
+    #weather-data {
+        width: 60%;
+    }
+
+    #current-day {
+        width: 60%;
+    }
 }
