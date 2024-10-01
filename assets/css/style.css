@@ -30,6 +30,10 @@ aside {
     background-color: rgb(255, 255, 255, 0.3);
     padding-left: 10px;
     padding-top: 10px;
+    height: fit-content;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    margin-left: 15px;
 }
 
 #weather-data {
@@ -46,7 +50,7 @@ aside {
     border: 5px solid indigo;
     border-radius: 10px;
     margin: 15px 0px 15px;
-    width:50%;
+    width: 50%;
     padding: 10px, 0px, 10px;
 }
 
@@ -59,7 +63,7 @@ aside {
 button {
     width: 50%;
     margin: 5px 0px 5px;
-    color:white;
+    color: white;
     background-color: green;
 }
 
@@ -85,7 +89,7 @@ form {
     flex-direction: column;
     width: 75%;
     background-color: rgb(255, 255, 255, 0.75);
-    padding-top:10px;
+    padding-top: 10px;
 }
 
 .card-section {
