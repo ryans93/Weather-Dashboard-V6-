@@ -137,6 +137,7 @@ select {
     .card-section {
         align-items: center;
         height: 60vh;
+        justify-content: flex-start;
         overflow-y: scroll;
         flex-wrap: nowrap;
     }
