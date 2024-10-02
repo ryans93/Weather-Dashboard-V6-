@@ -160,7 +160,7 @@ function saveHistory(name, lat, lon) {
             return;
         }
     }
-    searchHistory.push({ name: name, lat: lat, lon: lon });
+    searchHistory.unshift({ name: name, lat: lat, lon: lon });
     while (searchHistory.length > 10) {
         searchHistory.shift();
     }
