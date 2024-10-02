@@ -83,7 +83,7 @@ function displayCurrent(data) {
         name: data.name,
         icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`,
         iconAlt: data.weather[0].description,
-        date: `${date.getUTCMonth() + 1}/${date.getUTCDate()}/${date.getUTCFullYear()}`,
+        date: `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`,
         temp: data.main.temp,
         wind: data.wind.speed,
         humidity: data.main.humidity
@@ -119,7 +119,7 @@ function getForecast(lat, lon) {
                 let weatherDay = {
                     icon: `https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}.png`,
                     iconAlt: data.list[i].weather[0].description,
-                    date: `${date.getUTCMonth() + 1}/${date.getUTCDate()}/${date.getUTCFullYear()}`,
+                    date: `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`,
                     temp: data.list[i].main.temp,
                     wind: data.list[i].wind.speed,
                     humidity: data.list[i].main.humidity
