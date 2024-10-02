@@ -95,9 +95,9 @@ function displayCurrent(data) {
         <h2>${weather.name} (${weather.date})</h2>
         <img src=${weather.icon} alt=${weather.iconAlt}/>
     </div>
-    <h5>Temp: ${weather.temp}°F</h5>
-    <h5>Wind: ${weather.wind} mph</h5>
-    <h5>Humidity: ${weather.humidity}%</h5>
+    <h4>Temp: ${weather.temp}°F</h4>
+    <h4>Wind: ${weather.wind} mph</h4>
+    <h4>Humidity: ${weather.humidity}%</h4>
     `;
     document.getElementById("current-day").style = "opacity: 1;"
     setBackground(data.weather[0].icon);
