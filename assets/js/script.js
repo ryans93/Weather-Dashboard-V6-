@@ -161,8 +161,9 @@ function saveHistory(name, lat, lon) {
         }
     }
     searchHistory.unshift({ name: name, lat: lat, lon: lon });
+    console.log(searchHistory)
     while (searchHistory.length > 10) {
-        searchHistory.shift();
+        searchHistory.pop();
     }
     localStorage.setItem("history", JSON.stringify(searchHistory));
     showHistory();
